@@ -1,5 +1,5 @@
-let elem1 = document.querySelector('.div1')
-let elem2 = document.querySelector('.div2')
+let rangeLine = document.querySelector('.rangeLine')
+let leftPointer = document.querySelector('.leftPointer')
 
 // elem1.style.position = "absolute";
 // // elem1.style.left = "50px";
@@ -10,6 +10,6 @@ let elem2 = document.querySelector('.div2')
 // elem2.style.top = "20px";
 // elem2.style.left = "-10px";
 
-elem1.addEventListener("click", function(event){
+rangeLine.addEventListener("click", function(event){
     console.log(event.clientX, event.clientY)
 })

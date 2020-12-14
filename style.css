@@ -1,18 +1,17 @@
-*{
-            
-}
 body {
     background-color : rgb(46, 42, 42);
 }
-.div1{
-    background-color: aqua;
+.rangeSliderContainer{
     width: 70%;
-    height: 200px;
-    /* border: 5px solid red; */
+    margin: auto;
 }
-.div2{
+.rangeLine{
+    background-color: aqua;
+    width: 100%;
+    height: 40px;
+}
+.leftPointer{
     background-color: cornflowerblue;
     width: 20px;
     height: 40px;
-    /* border: 1px solid pink; */
 }
