@@ -1,17 +1,32 @@
 body {
     background-color : rgb(46, 42, 42);
 }
-/* .rangeSliderContainer{
-    width: 70%;
+.container{
     margin: auto;
+    width: 50%;
+    height: 50%;
+    display: block;
+}
+.myRangeSlider{
+    width : 100%;
+    /* height: 100%; */
+    background-color: aqua;
+    display: inline-block;
+}
+.sliderParams{
+    width : 100%;
+    height: 70px;
+    display: inline-block;
 }
 .rangeLine{
-    background-color: aqua;
-    width: 100%;
-    height: 40px;
+    width : 100%;
+    height: 30px;
+    background-color: rgb(137, 211, 53);
+    display: inline-block;
 }
-.leftPointer{
-    background-color: cornflowerblue;
-    width: 20px;
-    height: 40px;
-} */
+.pointer{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+}
