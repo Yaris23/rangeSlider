@@ -13,7 +13,7 @@ body {
     background-color: aqua;
     display: inline-block;
 }
-.sliderParams{
+.options{
     width : 100%;
     height: 70px;
     display: inline-block;
