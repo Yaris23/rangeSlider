@@ -1,10 +1,8 @@
 export class Line{
-constructor(minCount, maxCount){
-    this.minCount = minCount;
-    this.maxCount = maxCount;
-}
+    element;
+    constructor(){
+        this.element = document.createElement('div');
+        this.element.classList.add('line');
+    }
 
-show(){
-    console.log(this.minCount, this.maxCount)
-}
 }

@@ -1,13 +1,7 @@
 import {Slider} from './Slider.js';
 
-let params = {
-
-}
 
 let slider = new Slider('.container');
-
-slider.show()
-
 
 
 

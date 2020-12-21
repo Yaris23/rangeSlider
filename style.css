@@ -7,7 +7,7 @@ body {
     height: 50%;
     display: block;
 }
-.myRangeSlider{
+.slider{
     width : 100%;
     /* height: 100%; */
     background-color: aqua;
@@ -18,7 +18,7 @@ body {
     height: 70px;
     display: inline-block;
 }
-.rangeLine{
+.line{
     width : 100%;
     height: 30px;
     background-color: rgb(137, 211, 53);
