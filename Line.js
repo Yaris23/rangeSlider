@@ -1,4 +1,4 @@
-export class RangeLine{
+export class Line{
 constructor(minCount, maxCount){
     this.minCount = minCount;
     this.maxCount = maxCount;

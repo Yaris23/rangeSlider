@@ -1,13 +1,29 @@
-$.fn.myRangeSlider = function (options) {
-    let opt = options;
+import {Slider} from './Slider.js';
 
-    console.log(opt.left, opt.right);
+let params = {
+
 }
 
-$().myRangeSlider({
-    left : 0,
-    right : 10
-});
+let slider = new Slider('.container');
+
+slider.show()
+
+
+
+
+
+
+// $.fn.myRangeSlider = function (options) {
+//     let opt = options;
+//     let rangeLine = new RangeLine(0,5);
+//     rangeLine.show()
+// }
+
+// $().myRangeSlider({
+//     left : 0,
+//     right : 10
+// });
+
 
 
 // function createRangeSlider(startDivClass){
