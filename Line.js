@@ -10,6 +10,6 @@ export class Line{
         this.element.addEventListener('mousemove', this.show);
     }
     show(){
-        // console.log(event.clientX, event.clientY)
+        
     }
 }

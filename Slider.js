@@ -29,7 +29,7 @@ export class Slider{
         this.line.max = params.max;
 
         console.log(this.line.min, this.line.max)
-
+        console.log(this.line.element.offsetLeft, this.line.element.offsetTop, this.line.element.offsetWidth, this.line.element.offsetHeight)
     }
 
 }
