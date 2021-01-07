@@ -7,9 +7,9 @@ export class Line{
         this.element = document.createElement('div');
         this.element.classList.add('line');
 
-        this.element.addEventListener('mousemove', this.show);
+        this.element.addEventListener('click', this.getPosition);
     }
-    show(){
-        
+    getPosition(){
+        console.log()
     }
 }

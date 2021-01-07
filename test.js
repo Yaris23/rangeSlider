@@ -7,7 +7,3 @@ let params = {
 
 let slider = new Slider('.container', params);
 
-
-
-
-
