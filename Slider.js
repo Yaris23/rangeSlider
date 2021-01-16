@@ -9,9 +9,9 @@ export class Slider{
     pointer;
     options;
 
-    constructor(container, params = {}){
-        // Создание слайдера на сранице
-        this.line = new Line();
+    constructor(container, params){
+        // Создание и размещение слайдера на сранице
+        this.line = new Line(params.min, params.max, params.step);
         this.pointer = new Pointer();
         this.options = new Options();
 
@@ -24,13 +24,9 @@ export class Slider{
         this.slider.append(this.line.element);
         this.line.element.append(this.pointer.element);
     
-        // присвоение параметров
-        this.line.min = params.min;
-        this.line.max = params.max;
-
-        // console.log(this.line.min, this.line.max)
-        // console.log(this.line.element.offsetLeft, this.line.element.offsetTop, this.line.element.offsetWidth, this.line.element.offsetHeight)
-        
     }
 
+    writeWidth(){
+        console.log(this.line.element.clientWidth)
+    }
 }
