@@ -1,11 +1,10 @@
 export class Line{
+    
     element;
     container;
     min;
     max;
     step;
-    width;
-    scaleCounts = [];
 
     constructor(container, params){
         // Создаем элемент и присваиваем класс line
@@ -22,28 +21,56 @@ export class Line{
         this.step = params.step;
         this.width = this.element.clientWidth;
 
-
-        //вешаем событие клика для определения координаты
-        this.element.addEventListener('click', this.getClick);
-    
-        // console.log(this.min, this.max, this.step, this.width)
-        console.log(this.element.getBoundingClientRect())
     }
 
-    getClick(event){
-        // console.log(event.clientX);
+    getPosition(x,y){
         // все координаты линии
-        let coordinates = this.getBoundingClientRect();
+        let coordinates = this.element.getBoundingClientRect();
+
         // 1 процент от ширины линии
-        let onePersent = coordinates.width / 100;
+        let onePersentX = coordinates.width / 100;
 
-        // значение в процентах клик по линии, округленные до десятой
-        let clickPersent = (event.clientX - coordinates.left);
-        clickPersent = clickPersent / onePersent;
-        console.log(+clickPersent.toFixed(1));
+        // 1 процент от высоты линии
+        let onePersentY = coordinates.height / 100;
 
+        // значение в пикселях от левой границы линии и от верхней границы элемента линии
+        let pixelX = x - coordinates.left;
+        let pixelY = y - coordinates.top;
 
+        // ширина, значение в процентах клик по линии, округленные до десятой, приведенные к числу
+        let persentX = (x - coordinates.left);
+        persentX = +(persentX / onePersentX).toFixed(1);
+        
+        // высота, значение в процентах клик по линии, округленные до десятой, приведенные к числу
+        let persentY = (y - coordinates.top);
+        persentY = +(persentY / onePersentY).toFixed(1);
 
+        return {pixelX, pixelY, persentX, persentY, onePersentX};
+        
     }
-    
-}
+
+    createScale(min = this.min, max = this.max, step = this.step){
+        // массив значений шкалы линии
+        let scale = [];
+        // сассив значения шкалы в пикселях
+        let scalePix = [];
+        // координаты линии
+        let coordinates = this.element.getBoundingClientRect();
+        
+        // заполнение массива шкалы линии значениями от (min) до (max) с учетом указанного шага (step)
+        for(let i = min; i <= max; i+=step){
+            scale.push(+i.toFixed(1));
+        }
+
+        // величина шага в пикселях, округленная до десятой
+        let scaleStep = +(coordinates.width / (scale.length -1)).toFixed(1);
+
+        scale.forEach((item) => {
+            scalePix.push(item * scaleStep)
+        })
+        
+        return {scale, scalePix}
+    }
+
+   
+} 

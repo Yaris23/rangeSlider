@@ -11,4 +11,10 @@ let params = {
 
 let line = new Line('.container', params);
 
+let position = line.getPosition(150,30);
 
+let scale = line.createScale();
+
+console.log(position)
+console.log(scale.scale)
+console.log(scale.scalePix)
