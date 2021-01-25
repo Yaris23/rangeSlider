@@ -37,13 +37,11 @@ export class Line{
         // 1 процент от ширины линии
         let onePersent = coordinates.width / 100;
 
-        // значение в процентах клик по линии, округленные до десятой
+        // значение в процентах клика по линии, округленные до десятой
         let clickPersent = (event.clientX - coordinates.left);
         clickPersent = clickPersent / onePersent;
         console.log(+clickPersent.toFixed(1));
-
-
-
     }
+    
     
 }
